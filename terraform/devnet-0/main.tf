@@ -26,7 +26,7 @@ terraform {
     skip_requesting_account_id  = true
     skip_s3_checksum            = true
     region                      = "us-east-1"
-    bucket                      = "merge-testnets"
+    bucket                      = "peerdas-devnets"
     key                         = "infrastructure/devnet-0/terraform.tfstate"
   }
 }
@@ -50,7 +50,7 @@ variable "cloudflare_api_token" {
 
 variable "ethereum_network" {
   type    = string
-  default = "template-devnet-0"
+  default = "peerdas-devnet-0"
 }
 
 variable "base_cidr_block" {
@@ -62,41 +62,10 @@ variable "base_cidr_block" {
 locals {
   vm_groups = [
     var.bootnode,
+    var.lighthouse_geth_supernode,
     var.lighthouse_geth,
     var.lighthouse_nethermind,
-    var.lighthouse_erigon,
-    var.lighthouse_besu,
-    var.lighthouse_ethereumjs,
-    var.lighthouse_reth,
     var.prysm_geth,
     var.prysm_nethermind,
-    var.prysm_erigon,
-    var.prysm_besu,
-    var.prysm_ethereumjs,
-    var.prysm_reth,
-    var.lodestar_geth,
-    var.lodestar_nethermind,
-    var.lodestar_erigon,
-    var.lodestar_besu,
-    var.lodestar_ethereumjs,
-    var.lodestar_reth,
-    var.nimbus_geth,
-    var.nimbus_nethermind,
-    var.nimbus_erigon,
-    var.nimbus_besu,
-    var.nimbus_ethereumjs,
-    var.nimbus_reth,
-    var.teku_geth,
-    var.teku_nethermind,
-    var.teku_erigon,
-    var.teku_besu,
-    var.teku_ethereumjs,
-    var.teku_reth,
-    var.grandine_geth,
-    var.grandine_nethermind,
-    var.grandine_erigon,
-    var.grandine_besu,
-    var.grandine_ethereumjs,
-    var.grandine_reth,
   ]
 }
