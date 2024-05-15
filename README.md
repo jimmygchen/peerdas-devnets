@@ -3,9 +3,9 @@
 <h1 align="center">Infrastructure code for Dev/Testnets</h1>
 
 <p align="center">
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/ansible_lint.yaml/badge.svg"></a>
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/terraform_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/terraform_lint.yaml/badge.svg"></a>
-<a href="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml"><img src="https://github.com/ethpandaops/template-testnet/actions/workflows/helm_lint.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/ansible_lint.yaml"><img src="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/ansible_lint.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/terraform_lint.yaml"><img src="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/terraform_lint.yaml/badge.svg"></a>
+<a href="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/helm_lint.yaml"><img src="https://github.com/ethpandaops/peerdas-devnets/actions/workflows/helm_lint.yaml/badge.svg"></a>
 </p>
 
 This repository contains the infrastructure code used to setup ~all~ dev/testnets. A lot of the code uses reusable components either provided by our [ansible collection](https://github.com/ethpandaops/ansible-collection-general) or our [helm charts for kubernetes](https://github.com/ethpandaops/ethereum-helm-charts/).
@@ -14,7 +14,7 @@ This repository contains the infrastructure code used to setup ~all~ dev/testnet
 
 Status   | Network    | Links   | Ansible                                                      | Terraform | Kubernetes
 ------   | --------   | ----     |  -----                                                       | -------   | ------
- 🟢Template🔴 | [devnet-0](https://template.devnet.io/)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.srv.devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.srv.devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
+ 🟢Template🔴 | [devnet-0](https://peerdas-devnet-0.ethpandaops.io)   | [Network config](network-configs/devnet-0) / [Inventory](https://bootnode-1.srv.devnet-0.ethpandaops.io/meta/api/v1/inventory.json) / [Validator ranges](https://bootnode-1.srv.devnet-0.ethpandaops.io/meta/api/v1/validator-ranges.json)    | [🔗](ansible/inventories/devnet-0) | [🔗](terraform/devnet-0) | [🔗](kubernetes/devnet-0)
 
 # Development
 ## Version management for tools
@@ -90,7 +90,7 @@ lodestar-besu-1 ansible_host=167.99.34.241 cloud=digitalocean cloud_region=ams3 
 ```shell
 ansible-playbook -i inventories/devnet-0/inventory.ini playbook.yaml
 ```
-from the [ansible/](ansible/) directory to deploy the network. This will generate the genesis file, validators and deploy the network according to the configuration parameters specified in the [ansible/inventories/devnet-0/group_vars/all.yaml](ansible/inventories/devnet-0/group_vars/all.yaml) file.  
+from the [ansible/](ansible/) directory to deploy the network. This will generate the genesis file, validators and deploy the network according to the configuration parameters specified in the [ansible/inventories/devnet-0/group_vars/all.yaml](ansible/inventories/devnet-0/group_vars/all.yaml) file.
 
 Don't forget the following gotchas:
 - Change the `ethereum_genesis_chain_id` value in [ansible/inventories/devnet-0/group_vars/all.yaml](ansible/inventories/devnet-0/group_vars/all.yaml) to avoid clashing with an existing network

@@ -39,7 +39,7 @@ ethereum_genesis_generator_container_image: "{{ default_tooling_images.ethereum_
 ethereum_genesis_generator_version: "ad5158f7f3985056213d88c38a5ab7b5d13c3734"
 ethereum_genesis_network_seed: "{{ ansible_inventory_sources[0] }}"
 ethereum_genesis_chain_id: "70{{ 99999999 | random(start=10000000, seed=ethereum_genesis_network_seed) }}"
-ethereum_genesis_generator_output_dir: "../network-configs/{{ ethereum_network_name | replace('template-', '') }}"
+ethereum_genesis_generator_output_dir: "../network-configs/{{ ethereum_network_name | replace('peerdas-', '') }}"
 ethereum_genesis_timestamp: "{{ lookup('ansible.builtin.pipe', '{{ ethereum_genesis_timestamp_relative_cmd[ansible_system] }}') }}"
 ethereum_genesis_timedelay: 60
 ethereum_genesis_timestamp_relative_cmd:
