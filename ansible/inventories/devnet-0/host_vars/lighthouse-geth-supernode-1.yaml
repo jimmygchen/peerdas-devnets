@@ -1,2 +1,0 @@
-lighthouse_container_command_extra_args:
- - --subscribe-all-data-column-subnets

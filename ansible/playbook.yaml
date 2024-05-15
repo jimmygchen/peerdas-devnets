@@ -1,12 +1,12 @@
-- hosts: localhost
-  roles:
-    - role: ethpandaops.general.ethereum_genesis
-      tags: [ethereum_genesis]
+# - hosts: localhost
+#   roles:
+#     - role: ethpandaops.general.ethereum_genesis
+#       tags: [ethereum_genesis]
 
-- import_playbook: ethpandaops.general.bootstrap_server
-  vars:
-    target: "all:!localhost"
-  tags: [init-server, bootstrap]
+# - import_playbook: ethpandaops.general.bootstrap_server
+#   vars:
+#     target: "all:!localhost"
+#   tags: [init-server, bootstrap]
 
 - hosts: all:!localhost
   serial: "{{ batch_count | default('100%') }}"
@@ -71,6 +71,25 @@
                 0
               )
           }}
+
+- hosts: tx_fuzz_blobs
+  become: true
+  roles:
+    - role: ethpandaops.general.tx_fuzz
+      tags: [tx_fuzz, tx_fuzz_blobs]
+      vars:
+        tx_fuzz_container_name: "{{ tx_fuzz_blobs_container_name }}"
+        tx_fuzz_container_command: "{{ tx_fuzz_blobs_container_command }}"
+        tx_fuzz_container_image: "{{ tx_fuzz_blobs_container_image }}"
+- hosts: tx_fuzz_txs
+  become: true
+  roles:
+    - role: ethpandaops.general.tx_fuzz
+      tags: [tx_fuzz, tx_fuzz_txs]
+      vars:
+        tx_fuzz_container_name: "{{ tx_fuzz_txs_container_name }}"
+        tx_fuzz_container_command: "{{ tx_fuzz_txs_container_command }}"
+        tx_fuzz_container_image: "{{ tx_fuzz_txs_container_image }}"
 
 - hosts: bootnode
   become: true
