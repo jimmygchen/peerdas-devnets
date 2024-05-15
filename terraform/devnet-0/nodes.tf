@@ -51,7 +51,7 @@ variable "teku_nethermind" {
     name            = "teku-nethermind"
     count           = 1
     validator_start = 1200
-    validator_end   = 1500
+    validator_end   = 1300
   }
 }
 
@@ -59,8 +59,8 @@ variable "teku_geth" {
   default = {
     name            = "teku-geth"
     count           = 1
-    validator_start = 1500
-    validator_end   = 1800
+    validator_start = 1300
+    validator_end   = 1400
   }
 }
 
