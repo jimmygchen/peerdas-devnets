@@ -1,6 +1,6 @@
 {
   "config": {
-    "chainId": 7044638176,
+    "chainId": 7071720988,
     "homesteadBlock": 0,
     "eip150Block": 0,
     "eip155Block": 0,
@@ -17,7 +17,7 @@
     "shanghaiTime": 0,
     "cancunTime": 0,
     "depositContractAddress": "0x6f22fFbC56eFF051aECF839396DD1eD9aD6BBA9D",
-    "pragueTime": 19201715696189
+    "pragueTime": 19201715763305
   },
   "alloc": {
     "0x0000000000000000000000000000000000000000": {
@@ -914,5 +914,5 @@
   "nonce": "0x1234",
   "mixhash": "0x0000000000000000000000000000000000000000000000000000000000000000",
   "parentHash": "0x0000000000000000000000000000000000000000000000000000000000000000",
-  "timestamp": "1715696129"
+  "timestamp": "1715763245"
 }
