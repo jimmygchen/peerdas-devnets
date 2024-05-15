@@ -73,7 +73,8 @@ ethereum_genesis_generator_config_files:
     export GENESIS_TIMESTAMP={{ ethereum_genesis_timestamp }}
     export GENESIS_DELAY={{ ethereum_genesis_timedelay }}
     export SLOT_DURATION_IN_SECONDS=12
-    export MAX_CHURN=8
+    export MAX_PER_EPOCH_ACTIVATION_CHURN_LIMIT=8
+    export CHURN_LIMIT_QUOTIENT=65536
     export EJECTION_BALANCE=16000000000
     export ETH1_FOLLOW_DISTANCE=2048
     export MIN_VALIDATOR_WITHDRAWABILITY_DELAY=256
