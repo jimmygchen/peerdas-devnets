@@ -51,6 +51,9 @@ checkpointz:
       - name: bootnode-1
         address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.bootnode-1.peerdas-devnet-0.ethpandaops.io
         dataProvider: true
+      - name: grandine-geth-1
+        address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.grandine-geth-1.peerdas-devnet-0.ethpandaops.io
+        dataProvider: true
       - name: lighthouse-geth-1
         address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.lighthouse-geth-1.peerdas-devnet-0.ethpandaops.io
         dataProvider: true
@@ -71,9 +74,6 @@ checkpointz:
         dataProvider: true
       - name: nimbus-geth-1
         address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.nimbus-geth-1.peerdas-devnet-0.ethpandaops.io
-        dataProvider: true
-      - name: nimbus-nethermind-1
-        address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.nimbus-nethermind-1.peerdas-devnet-0.ethpandaops.io
         dataProvider: true
       - name: prysm-geth-1
         address: https://<path:/secrets/services/services.enc.yaml#ethereum | jsonPath {.testnets.peerdas-devnets.node_ingress.combined}>@bn.prysm-geth-1.peerdas-devnet-0.ethpandaops.io

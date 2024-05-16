@@ -75,7 +75,7 @@ variable "nimbus_geth" {
 
 variable "grandine_geth" {
   default = {
-    name            = "nimbus-nethermind"
+    name            = "grandine-geth"
     count           = 1
     validator_start = 1600
     validator_end   = 1700
