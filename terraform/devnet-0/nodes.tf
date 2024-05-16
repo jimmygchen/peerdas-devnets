@@ -64,3 +64,20 @@ variable "teku_geth" {
   }
 }
 
+variable "nimbus_geth" {
+  default = {
+    name            = "nimbus-geth"
+    count           = 1
+    validator_start = 1400
+    validator_end   = 1500
+  }
+}
+
+variable "grandine_geth" {
+  default = {
+    name            = "nimbus-nethermind"
+    count           = 1
+    validator_start = 1600
+    validator_end   = 1700
+  }
+}

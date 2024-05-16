@@ -57,7 +57,7 @@ variable "base_cidr_block" {
   default = "10.76.0.0/16"
 }
 ////////////////////////////////////////////////////////////////////////////////////////
-//                                        LOCALS                                      
+//                                        LOCALS
 ////////////////////////////////////////////////////////////////////////////////////////
 locals {
   vm_groups = [
@@ -68,5 +68,7 @@ locals {
     var.prysm_nethermind,
     var.teku_geth,
     var.teku_nethermind,
+    var.nimbus_geth,
+    var.grandine_geth,
   ]
 }

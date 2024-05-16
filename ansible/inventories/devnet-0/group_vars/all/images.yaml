@@ -1,12 +1,12 @@
 default_ethereum_client_images:
 ### Consensus layer clients
-  lighthouse: ethpandaops/lighthouse:das
+  lighthouse: ethpandaops/lighthouse:das-cust4-snet64
   lodestar: chainsafe/lodestar:latest
-  nimbus: statusim/nimbus-eth2:multiarch-latest
-  prysm: ethpandaops/prysm-beacon-chain:peerdas
+  nimbus: ethpandaops/nimbus-eth2:wip-peerdas
+  prysm: ethpandaops/prysm-beacon-chain:peerDAS
   prysm_validator: gcr.io/prysmaticlabs/prysm/validator:latest
-  teku: consensys/teku:latest
-  grandine: ethpandaops/grandine:develop
+  teku: ethpandaops/teku:das
+  grandine: ethpandaops/grandine:7594
 ### Execution layer clients
   besu: hyperledger/besu:latest
   geth: ethereum/client-go:stable
@@ -34,4 +34,4 @@ default_tooling_images:
   blobscan_indexer: blossomlabs/blobscan-indexer:latest
   dora: ethpandaops/dora:peer-das-latest
   dugtrio: ethpandaops/dugtrio:latest
-  ethereum_genesis_generator: ethpandaops/ethereum-genesis-generator:peerdas-ad5158f
+  ethereum_genesis_generator: ethpandaops/ethereum-genesis-generator:3.1.6
