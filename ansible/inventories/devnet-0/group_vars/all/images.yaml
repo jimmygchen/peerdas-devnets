@@ -6,7 +6,7 @@ default_ethereum_client_images:
   prysm: ethpandaops/prysm-beacon-chain:peerDAS
   prysm_validator: gcr.io/prysmaticlabs/prysm/validator:latest
   teku: ethpandaops/teku:das
-  grandine: ethpandaops/grandine:7594
+  grandine: ethpandaops/grandine:7594-94a9ce2
 ### Execution layer clients
   besu: hyperledger/besu:latest
   geth: ethereum/client-go:stable
