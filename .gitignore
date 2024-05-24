@@ -28,6 +28,8 @@ terraform.rc
 # Sops
 **/.decrypted*
 
+scripts/deposits_*
+
 # Validator keys
 **/files/validator_keys/*
 network-configs/**/mnemonics.yaml
