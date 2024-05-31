@@ -3,7 +3,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////
 variable "digitalocean_project_name" {
   type    = string
-  default = "Public Testnets"
+  default = "Peerdas-devnets"
 }
 
 variable "digitalocean_ssh_key_name" {
